@@ -57,8 +57,8 @@ if response.status_code == 200:
                 data = {
                     "message": commit_message,
                     "committer": {
-                        "name": "你的名字",
-                        "email": "你的电子邮件@example.com"
+                        "name": "yu",
+                        "email": "481257548@qq.com"
                     },
                     "content": "",
                     "sha": item['sha']
