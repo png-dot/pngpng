@@ -5,7 +5,7 @@ import pytz
 # GitHub 仓库的信息
 repository_owner = 'png-dot'
 repository_name = 'pngpng'
-access_token = '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'
+access_token = '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'
 
 # 构建API请求的URL
 url = f'https://api.github.com/repos/{repository_owner}/{repository_name}/contents/'
@@ -57,8 +57,8 @@ if response.status_code == 200:
                 data = {
                     "message": commit_message,
                     "committer": {
-                        "name": "yu",
-                        "email": "481257548@qq.com"
+                        "name": "你的名字",
+                        "email": "你的电子邮件@example.com"
                     },
                     "content": "",
                     "sha": item['sha']
