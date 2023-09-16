@@ -1,0 +1,16 @@
+name: Auto Delete Old Files
+on:
+  push:
+    branches: 
+      - main
+
+jobs:
+  delete_old_files:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout代码
+        uses: actions/checkout@v2
+
+      - name: 删除旧文件
+        run: |
+          find . -type f -mtime +1 -exec rm {} \;
