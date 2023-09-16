@@ -23,7 +23,7 @@ jobs:
           pip install requests pytz
 
       - name: Run script
-        run: python /main/py/py.py # 更新为正确的脚本路径
+        run: python py/py.py # 更新为正确的脚本路径
 
       - name: Commit and push changes (optional)
         run: |
