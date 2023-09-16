@@ -5,7 +5,7 @@ import pytz
 # GitHub 仓库的信息
 repository_owner = 'png-dot'
 repository_name = 'pngpng'
-access_token = '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'
+access_token = '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'
 
 # 构建API请求的URL
 url = f'https://api.github.com/repos/{repository_owner}/{repository_name}/contents/'
