@@ -27,8 +27,8 @@ jobs:
 
       - name: Commit and push changes (optional)
         run: |
-          git config --local user.email "you@example.com"
-          git config --local user.name "Your Name"
+          git config --local user.email "481257548@qq.com"
+          git config --local user.name "yu"
           git add .
           git commit -m "Delete old files"
           git push
