@@ -1,34 +1,27 @@
-name: Delete Old Files
+name: Run Python script
 
 on:
   push:
-    branches: 
-      - main
+    branches:
+      - main  # 修改为您要触发工作流的分支
 
 jobs:
-  delete_old_files:
+  run-script:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+    - name: Checkout code
+      uses: actions/checkout@v2
 
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.x' # 选择所需的Python版本
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.x  # 修改为您要使用的 Python 版本
 
-      - name: Install dependencies
-        run: |
-          pip install requests pytz
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt  # 如果有依赖，请取消注释该行并在项目根目录下创建 requirements.txt 文件
 
-      - name: Run script
-        run: python py/py.py # 更新为正确的脚本路径
-
-      - name: Commit and push changes (optional)
-        run: |
-          git config --local user.email "481257548@qq.com"
-          git config --local user.name "yu"
-          git add .
-          git commit -m "Delete old files"
-          git push
+    - name: Run Python script
+      run: python py/py.py  # 修改为您的 Python 脚本名称
